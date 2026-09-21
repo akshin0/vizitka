@@ -1,0 +1,407 @@
+
+  <!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akşin Abaslı</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            min-height: 100vh;
+            transition: 0.4s;
+        }
+    .avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #444, #111);
+    color: #fff;
+
+    border: 3px solid #fff;
+    font-size: 42px;
+    font-weight: 700;
+
+    transition: 0.4s;
+}
+body.dark .avatar {
+    background: linear-gradient(135deg, #444, #111);
+    color: #fff;
+    border-color: #fff;
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.35);
+}
+body.light .avatar {
+    background: linear-gradient(135deg, #fff, #ddd);
+    color: #111;
+    border-color: #111;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+        /* KART */
+        .card-custom {
+            border-radius: 25px;
+            transition: 0.4s;
+        }
+
+        
+        /* VİZİTKA DÜYMƏLƏRİ */
+        .btn-custom {
+            border-radius: 14px;
+            padding: 14px;
+            transition: .3s;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+
+        /* DARK MODE */
+        body.dark {
+            background: #000;
+            color: white;
+        }
+
+        body.dark .card-custom {
+            background: #080808;
+            border: 1px solid #333;
+            box-shadow:
+                0 0 20px rgba(255,255,255,.15);
+        }
+
+        body.dark .btn-custom {
+            background: #111;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        body.dark .btn-custom:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 20px rgba(255,255,255,.5);
+        }
+
+        /* LIGHT MODE */
+        body.light {
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        body.light .card-custom {
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow:
+                0 5px 30px rgba(0,0,0,.15);
+        }
+
+        body.light .btn-custom {
+            background: #fff;
+            color: #111;
+            border: 1px solid #ccc;
+        }
+
+        body.light .btn-custom:hover {
+            background: #111;
+            color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,.3);
+        }
+
+        /* THEME DÜYMƏSİ */
+        .theme-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            font-size: 20px;
+            transition: .3s;
+        }
+
+        body.dark .theme-btn {
+            background: white;
+            color: black;
+        }
+
+        body.light .theme-btn {
+            background: #111;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="dark">
+
+<div class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
+
+    <div
+        class="card-custom p-4 p-md-5 text-center w-100"
+        style="max-width: 430px;"
+    >
+
+        <!-- YUXARI HİSSƏ -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <!-- DİLLƏR -->
+            <div>
+
+                <button
+                    class="btn btn-outline-secondary btn-sm"
+                    onclick="changeLanguage('az')">
+                    🇦🇿
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary btn-sm"
+                    onclick="changeLanguage('ru')">
+                    🇷🇺
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary btn-sm"
+                    onclick="changeLanguage('en')">
+                    EN
+                </button>
+
+            </div>
+
+            <!-- QARA / AĞ -->
+            <button
+                class="theme-btn"
+                onclick="toggleTheme()"
+                id="themeButton">
+
+                ☀️
+
+            </button>
+
+        </div>
+
+
+        <!-- PROFİL ŞƏKLİ -->
+
+        <div class="avatar">AA</div>
+        
+        <!-- AD -->
+
+        <h1 class="fw-bold mb-2">
+            Akşin Abaslı
+        </h1>
+
+
+        <!-- AÇIQLAMA -->
+
+        <p
+            id="description"
+            class="text-secondary mb-4">
+
+            Şəxsi rəqəmsal vizitkam
+
+        </p>
+
+
+        <!-- TELEFON -->
+
+        <a
+            href="tel:+994558555205"
+            class="btn btn-custom w-100 mb-3"
+            id="phone">
+
+            📞 Telefon
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/+994558555205"
+            target="_blank"
+            class="btn btn-custom w-100 mb-3"
+            id="whatsapp">
+
+            💬 WhatsApp
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/akshinabasli12/"
+            target="_blank"
+            class="btn btn-custom w-100 mb-3">
+
+            📸 Instagram
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+            href="https://tiktok.com/@akshin.abasli3"
+            target="_blank"
+            class="btn btn-custom w-100 mb-3">
+
+            🎵 TikTok
+
+        </a>
+
+
+        <!-- KONTAKT -->
+
+        <a
+            href="contact.vcf"
+            class="btn btn-custom w-100"
+            id="contact">
+
+            👤 Kontaktlara əlavə et
+
+        </a>
+
+
+        <small class="text-secondary d-block mt-4">
+            © 2026 Akşin Abaslı
+        </small>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* QARA / AĞ REJİM */
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+
+    const button =
+        document.getElementById("themeButton");
+
+    if (document.body.classList.contains("dark")) {
+
+        button.innerText = "☀️";
+
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        button.innerText = "🌙";
+
+        localStorage.setItem("theme", "light");
+    }
+}
+
+
+/* DİL */
+
+function changeLanguage(lang) {
+
+    const description =
+        document.getElementById("description");
+
+    const phone =
+        document.getElementById("phone");
+
+    const whatsapp =
+        document.getElementById("whatsapp");
+
+    const contact =
+        document.getElementById("contact");
+
+
+    if (lang === "az") {
+
+        description.innerText =
+            "Şəxsi rəqəmsal vizitkam";
+
+        phone.innerText =
+            "📞 Telefon";
+
+        whatsapp.innerText =
+            "💬 WhatsApp";
+
+        contact.innerText =
+            "👤 Kontaktlara əlavə et";
+    }
+
+
+    if (lang === "ru") {
+
+        description.innerText =
+            "Моя цифровая визитка";
+
+        phone.innerText =
+            "📞 Телефон";
+
+        whatsapp.innerText =
+            "💬 WhatsApp";
+
+        contact.innerText =
+            "👤 Добавить в контакты";
+    }
+
+
+    if (lang === "en") {
+
+        description.innerText =
+            "My digital business card";
+
+        phone.innerText =
+            "📞 Phone";
+
+        whatsapp.innerText =
+            "💬 WhatsApp";
+
+        contact.innerText =
+            "👤 Add to contacts";
+    }
+}
+
+
+/* SAYT AÇILANDA SON SEÇİM QALSIN */
+
+window.onload = function() {
+
+    const savedTheme =
+        localStorage.getItem("theme");
+
+    const button =
+        document.getElementById("themeButton");
+
+    if (savedTheme === "light") {
+
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+
+        button.innerText = "🌙";
+
+    } else {
+
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+
+        button.innerText = "☀️";
+    }
+};
+
+</script>
+
+</body>
+</html>
